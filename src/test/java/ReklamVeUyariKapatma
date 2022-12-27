@@ -1,0 +1,5 @@
+*** Cikan reklami kapatmak icin;
+driver.navigate().refresh();
+
+*** Cikan uyariyi kapatmak icin;
+driver.switchTo().alert().accept();
