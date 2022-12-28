@@ -1,6 +1,7 @@
 package testCases;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -68,12 +69,16 @@ public class Case04_KullaniciOturumuKapat {
         driver.findElement(By.xpath("//*[@href='/logout']")).click();
 
         //10. Kullanıcının oturum açma sayfasına yönlendirildiğini doğrulayın
-
-        WebElement oturumAcmaSayfasi = driver.findElement(By.xpath("//*[@href='/login']"));
+        Thread.sleep(2000);
+        WebElement oturumAcmaSayfasi = driver.findElement(By.xpath("//*[text()='Login to your account']"));
         Assert.assertTrue(oturumAcmaSayfasi.isDisplayed());
 
     }
 
+    @AfterClass
+    public static void teardown(){
+        driver.close();
+    }
 
 
 
