@@ -40,7 +40,7 @@ public class Case02_DogruePostaSifreHesapSil {
             System.out.println("PASSED");
         }else System.out.println("FAILED");
         //6. Doğru e-posta adresini ve şifreyi girin
-        driver.findElement(By.xpath("//*[@type='email'][1]")).sendKeys("meryemkkkk@gmail.com", Keys.TAB,"1234567");
+        driver.findElement(By.xpath("//*[@type='email'][1]")).sendKeys("asdzF123@gmail.com", Keys.TAB,"12345");
         // 7. 'Giriş yap' düğmesini tıklayın
         driver.findElement(By.xpath("//*[@data-qa='login-button']")).click();
         //8. 'Kullanıcı adı olarak oturum açtınız' seçeneğinin görünür olduğunu doğrulayın
