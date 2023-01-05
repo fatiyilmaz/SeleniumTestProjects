@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C07_AramaCubuguTesti {
+public class DOM_aramaCubuguTesti {
     static WebDriver driver;
     @BeforeClass
     public static void setup(){

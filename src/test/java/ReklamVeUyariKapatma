@@ -3,3 +3,5 @@ driver.navigate().refresh();
 
 *** Cikan uyariyi kapatmak icin;
 driver.switchTo().alert().accept();
+
+*** clik refresh clik
