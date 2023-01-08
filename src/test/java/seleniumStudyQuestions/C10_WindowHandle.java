@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import unitilities.Main;
 
 import java.util.Set;
@@ -37,12 +38,11 @@ public class C10_WindowHandle extends Main {
 
 
         //New Tab butonuna click yap
+        String window1handle = driver.getWindowHandle();
         newTab.click();
 
 
         //Açılan yeni Tab da ""This is a sample page"" yazısının görünür olduğunu doğrula
-
-        String window1handle = driver.getWindowHandle();
 
         Set<String> gecis = driver.getWindowHandles();
         for (String w: gecis){
@@ -54,7 +54,9 @@ public class C10_WindowHandle extends Main {
         String textResult = driver.findElement(By.xpath("//*[@id='sampleHeading']")).getText();
         String textResult1 = "This is a sample page";
         Assert.assertTrue(textResult.contains(textResult1));
-
+        Thread.sleep(3000);
+//        String window2handle = driver.getWindowHandle();
+//        driver.switchTo().window(window2handle).close(); //new tab'la acilan pencereyi kapatir.
 
         //İlk Tab'a geri dön
         driver.switchTo().window(window1handle);
